@@ -10,7 +10,9 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "next": "12.2.5",
+    "algoliasearch": "^4.14.2",
+    "newt-client-js": "^3.1.1",
+    "next": "^12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
