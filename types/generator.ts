@@ -1,4 +1,4 @@
-import type { Content } from 'newt-client-js'
+import { Content } from 'newt-client-js'
 
 interface Image {
   _id: string
