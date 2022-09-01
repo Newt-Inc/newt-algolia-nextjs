@@ -38,8 +38,13 @@ a:hover {
   pointer-events: none;
 }
 .Search_Logo {
-  width: 140px;
+  width: 120px;
   margin: 24px auto 0 auto;
+}
+@media (min-width: 600px) {
+  .Search_Logo {
+    width: 140px;
+  }
 }
 
 /* ais-SearchBox */
@@ -143,9 +148,6 @@ a:hover {
 }
 .ais-Hits-item_Star span {
   margin: 0 0 0 6px;
-}
-.ais-Highlight-separator {
-  display: none;
 }
 .ais-Hits_Empty {
   border: 1px solid #e5e5e5;
