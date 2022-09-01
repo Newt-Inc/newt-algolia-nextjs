@@ -1,25 +1,37 @@
 import { Highlight } from 'react-instantsearch-hooks-web'
+import styles from '../styles/Home.module.css'
 
 export function Hit({ hit }: any): JSX.Element {
   return (
-    <div>
-      <img src={hit.logo.src} alt={hit.fileName} width="60" height="60" />
-      <div>
-        <Highlight attribute="title" hit={hit} />
+    <>
+      <div className="ais-Hits-item_Logo">
+        <img src={hit.logo.src} alt={hit.fileName} width="40" height="40" />
       </div>
-      <a href={hit.url} rel="noreferrer noopener" target="_blank">
-        {hit.url}
-      </a>
-      <div>
-        <Highlight attribute="description" hit={hit} />
+      <div className="ais-Hits-item_Data">
+        <div className="ais-Hits-item_Header">
+          <h2 className="ais-Hits-item_Name">
+            <a href={hit.url} rel="noreferrer noopener" target="_blank">
+              <Highlight attribute="title" hit={hit} />
+            </a>
+          </h2>
+          <p className="ais-Hits-item_URL">
+            {hit.url}
+          </p>
+        </div>
+        <p className="ais-Hits-item_Description">
+          <Highlight attribute="description" hit={hit} />
+        </p>
+        <div className="ais-Hits-item_Footer">
+          <div className="ais-Hits-item_Tags">
+            <Highlight attribute="language" hit={hit} />
+            <Highlight attribute="templates" hit={hit} />
+          </div>
+          <div className="ais-Hits-item_Star">
+            <img src="/star.svg" alt="" width="16" height="15" />
+            <span>{hit.star}</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <Highlight attribute="language" hit={hit} />
-      </div>
-      <div>
-        <Highlight attribute="templates" hit={hit} />
-      </div>
-      <div>{hit.star}</div>
-    </div>
+    </>
   )
 }

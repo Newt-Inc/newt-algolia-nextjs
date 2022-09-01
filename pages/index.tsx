@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, Hits, SearchBox } from 'react-instantsearch-hooks-web'
 import styles from '../styles/Home.module.css'
@@ -41,7 +40,12 @@ const Home: NextPage = () => {
             </dd>
           </dl>
           <h1>Static Site Generators 😉</h1>
-          <SearchBox />
+          <div className="Search">
+            <SearchBox />
+            <span className="Search_FormIcon">
+              <img src="/search.svg" alt="" width="19" height="19" />
+            </span>
+          </div>
         </header>
 
         <div className={styles.Container}>
@@ -108,7 +112,7 @@ const Home: NextPage = () => {
         target="_blank"
         className={styles.Badge}
       >
-        <Image src="/logo.svg" alt="Newt" width={16} height={13} />
+        <img src="/logo.svg" alt="Newt" width="16" height="13" />
         <span className={styles.Badge_Text}>Made in Newt</span>
       </a>
     </div>
