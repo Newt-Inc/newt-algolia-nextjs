@@ -39,7 +39,7 @@ a:hover {
 }
 .Search_Logo {
   width: 120px;
-  margin: 24px auto 0 auto;
+  margin: 20px auto 0 auto;
 }
 @media (min-width: 600px) {
   .Search_Logo {
@@ -80,6 +80,7 @@ a:hover {
   display: flex;
   margin: 0 0 40px 0;
   padding: 0;
+  min-width: 0;
 }
 .ais-Hits-item:last-child {
   margin: 0;
@@ -93,7 +94,7 @@ a:hover {
   justify-content: center;
   width: 60px;
   height: 60px;
-  margin: 0 16px 0 0;
+  margin: 0 12px 0 0;
 }
 .ais-Hits-item_Logo img {
   width: 30px;
@@ -102,13 +103,17 @@ a:hover {
 }
 .ais-Hits-item_Data {
   flex: 1;
+  width: 100%;
+  margin-left: -76px;
 }
 .ais-Hits-item_Header {
   display: block;
-  margin: 0 0 4px 0;
+  min-width: 0;
+  height: 68px;
+  padding: 8px 0 0 76px;
 }
 .ais-Hits-item_Name {
-  margin: 0;
+  margin: 0 0 4px 0;
   padding: 0;
   font-size: 1.6rem;
   line-height: 1.2;
@@ -117,6 +122,9 @@ a:hover {
   margin: 0;
   font-size: 1.3rem;
   color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .ais-Hits-item_Description {
   margin: 0 0 12px 0;
@@ -124,13 +132,16 @@ a:hover {
   line-height: 1.3;
 }
 .ais-Hits-item_Footer {
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .ais-Hits-item_Tags {
-  margin: 0 0 8px 0;
+  margin: 0 12px 0 0;
   padding: 0;
   line-height: 1.5;
   display: flex;
+  flex-wrap: wrap;
 }
 .ais-Hits-item_Tags > span {
   margin: 0 4px 0 0;
@@ -165,21 +176,23 @@ a:hover {
     width: 40px;
     height: 40px;
   }
+  .ais-Hits-item_Data {
+    width: calc(100% - 106px);
+    margin-left: 0;
+  }
   .ais-Hits-item_Header {
     display: flex;
     align-items: baseline;
+    height: inherit;
+    padding: 0;
+  }
+  .ais-Hits-item_Name {
+    margin: 0;
   }
   .ais-Hits-item_URL {
     margin: 0 0 0 12px;
   }
   .ais-Hits-item_Description {
     line-height: 1.5;
-  }
-  .ais-Hits-item_Footer {
-    display: flex;
-    align-items: center;
-  }
-  .ais-Hits-item_Tags {
-    margin: 0 12px 0 0;
   }
 }

@@ -41,7 +41,7 @@ const Home: NextPage = () => {
                 GitHub
               </a>
               <a href="#" rel="noreferrer noopener" target="_blank">
-                Back to tutorial page
+                Tutorial page
               </a>
             </dd>
           </dl>
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
               >
                 GitHub
               </a>
-              <a href="#">Back to tutorial page</a>
+              <a href="#">Tutorial page</a>
             </dd>
           </dl>
         </footer>
