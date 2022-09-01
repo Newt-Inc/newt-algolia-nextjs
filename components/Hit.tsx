@@ -1,6 +1,6 @@
 import { Highlight } from 'react-instantsearch-hooks-web'
 
-export function Hit({ hit }: any): JSX.Element {
+export const Hit = ({ hit }: any) => {
   return (
     <>
       <div className="ais-Hits-item_Logo">
@@ -13,9 +13,7 @@ export function Hit({ hit }: any): JSX.Element {
               <Highlight attribute="title" hit={hit} />
             </a>
           </h2>
-          <p className="ais-Hits-item_URL">
-            {hit.url}
-          </p>
+          <p className="ais-Hits-item_URL">{hit.url}</p>
         </div>
         <p className="ais-Hits-item_Description">
           <Highlight attribute="description" hit={hit} />

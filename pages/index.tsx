@@ -3,12 +3,13 @@ import Head from 'next/head'
 import algoliasearch from 'algoliasearch/lite'
 import {
   InstantSearch,
-  Hits,
   SearchBox,
+  Hits,
   PoweredBy,
 } from 'react-instantsearch-hooks-web'
 import styles from '../styles/Home.module.css'
 import { Hit } from '../components/Hit'
+import { NoResultsBoundary, NoResults } from '../components/NoResults'
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID + '',
@@ -91,7 +92,9 @@ const Home: NextPage = () => {
           </nav>
 
           <main className={styles.Main}>
-            <Hits hitComponent={Hit} />
+            <NoResultsBoundary fallback={<NoResults />}>
+              <Hits hitComponent={Hit} />
+            </NoResultsBoundary>
           </main>
         </div>
 
