@@ -1,7 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import algoliasearch from 'algoliasearch/lite'
+import { InstantSearch, Hits, SearchBox } from 'react-instantsearch-hooks-web'
 import styles from '../styles/Home.module.css'
+import { Hit } from '../components/Hit'
+
+const searchClient = algoliasearch(
+  process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID + '',
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY + ''
+)
 
 const Home: NextPage = () => {
   return (
@@ -16,18 +24,29 @@ const Home: NextPage = () => {
         <dl>
           <dt>Newt + Algolia Example</dt>
           <dd>
-            <a href="https://github.com/Newt-Inc/newt-algolia-nextjs" rel="noreferrer noopener" target="_blank">GitHub</a>
-            <a href="#" rel="noreferrer noopener" target="_blank">Back to tutorial page</a>
+            <a
+              href="https://github.com/Newt-Inc/newt-algolia-nextjs"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              GitHub
+            </a>
+            <a href="#" rel="noreferrer noopener" target="_blank">
+              Back to tutorial page
+            </a>
           </dd>
         </dl>
         <h1>Static Site Generators 😉</h1>
-        <div>
-          <input type="search" />
-        </div>
+        <InstantSearch
+          indexName={process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME + ''}
+          searchClient={searchClient}
+        >
+          <SearchBox />
+          <Hits hitComponent={Hit} />
+        </InstantSearch>
       </header>
 
       <div className={styles.Container}>
-
         <nav className={styles.Nav}>
           <h2>Sort</h2>
           <select>
@@ -64,21 +83,24 @@ const Home: NextPage = () => {
         </nav>
 
         <main className={styles.Main}>
-          Next.js
-          https://www.newt.so/
-          Production grade React applications that scale. The world’s leading companies use Next.js by Vercel to build static and dynamic websites and web applications.
-          JavaScript
-          React
+          Next.js https://www.newt.so/ Production grade React applications that
+          scale. The world’s leading companies use Next.js by Vercel to build
+          static and dynamic websites and web applications. JavaScript React
           2344
         </main>
-
       </div>
 
       <footer className={styles.Footer}>
         <dl>
           <dt>Newt + Algolia Example</dt>
           <dd>
-            <a href="https://github.com/Newt-Inc/newt-algolia-nextjs" rel="noreferrer noopener" target="_blank">GitHub</a>
+            <a
+              href="https://github.com/Newt-Inc/newt-algolia-nextjs"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              GitHub
+            </a>
             <a href="#">Back to tutorial page</a>
           </dd>
         </dl>
@@ -93,7 +115,6 @@ const Home: NextPage = () => {
         <Image src="/logo.svg" alt="Newt" width={16} height={13} />
         <span className={styles.Badge_Text}>Made in Newt</span>
       </a>
-
     </div>
   )
 }
