@@ -19,7 +19,7 @@ export const NoResults = () => {
   const { indexUiState } = useInstantSearch()
 
   return (
-    <div>
+    <div className="ais-Hits_Empty">
       <p>
         No results for <q>{indexUiState.query}</q>.
       </p>

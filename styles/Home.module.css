@@ -2,7 +2,6 @@
 .Wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -76,6 +75,8 @@
   padding: 40px 28px;
   flex: 1;
   box-sizing: border-box;
+  align-items: flex-start;
+  position: relative;
 }
 @media (min-width: 600px) {
   .Container {
@@ -88,6 +89,8 @@
 .Nav {
   width: 100%;
   margin: 0 0 40px 0;
+  position: relative;
+  top: 0;
 }
 .Nav h2 {
   font-size: 1.6rem;
@@ -139,6 +142,8 @@
   .Nav {
     width: 20%;
     margin: 0 10% 0 0;
+    position: sticky;
+    top: 40px;  
   }
   .Nav ul {
     display: block;

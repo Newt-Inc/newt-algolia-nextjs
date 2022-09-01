@@ -25,7 +25,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* ais-SearchBox*/
+/* ais-Search */
 .Search {
   position: relative;
   max-width: 520px;
@@ -37,6 +37,12 @@ a:hover {
   top: 14px;
   pointer-events: none;
 }
+.Search_Logo {
+  width: 140px;
+  margin: 24px auto 0 auto;
+}
+
+/* ais-SearchBox */
 .ais-SearchBox-form input[type="search"] {
   padding: 0 16px 0 52px;
   height: 46px;
@@ -87,6 +93,7 @@ a:hover {
 .ais-Hits-item_Logo img {
   width: 30px;
   height: 30px;
+  object-fit: contain;
 }
 .ais-Hits-item_Data {
   flex: 1;
@@ -139,6 +146,12 @@ a:hover {
 }
 .ais-Highlight-separator {
   display: none;
+}
+.ais-Hits_Empty {
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 8px 28px;
+  background: #f8f8f8;
 }
 @media (min-width: 600px) {
   .ais-Hits-item_Logo {

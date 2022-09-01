@@ -51,7 +51,7 @@ const Home: NextPage = () => {
             <span className="Search_FormIcon">
               <img src="/search.svg" alt="" width="19" height="19" />
             </span>
-            <PoweredBy />
+            <PoweredBy className="Search_Logo" />
           </div>
         </header>
 
