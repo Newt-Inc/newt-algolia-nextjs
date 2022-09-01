@@ -1,7 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import algoliasearch from 'algoliasearch/lite'
-import { InstantSearch, Hits, SearchBox } from 'react-instantsearch-hooks-web'
+import {
+  InstantSearch,
+  Hits,
+  SearchBox,
+  PoweredBy,
+} from 'react-instantsearch-hooks-web'
 import styles from '../styles/Home.module.css'
 import { Hit } from '../components/Hit'
 
@@ -45,6 +50,7 @@ const Home: NextPage = () => {
             <span className="Search_FormIcon">
               <img src="/search.svg" alt="" width="19" height="19" />
             </span>
+            <PoweredBy />
           </div>
         </header>
 
