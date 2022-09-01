@@ -1,5 +1,4 @@
 import { Highlight } from 'react-instantsearch-hooks-web'
-import styles from '../styles/Home.module.css'
 
 export function Hit({ hit }: any): JSX.Element {
   return (

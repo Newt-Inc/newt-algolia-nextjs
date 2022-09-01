@@ -51,6 +51,11 @@ a:hover {
 .ais-SearchBox-reset {
   display: none;
 }
+.ais-SearchBox-loadingIndicator {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+}
 
 /* ais-Hits */
 .ais-Hits-list {
