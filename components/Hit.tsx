@@ -1,6 +1,8 @@
 import { Highlight } from 'react-instantsearch-hooks-web'
 
 export const Hit = ({ hit }: any) => {
+  console.log('hit', hit)
+
   return (
     <>
       <div className="ais-Hits-item_Logo">
@@ -20,8 +22,10 @@ export const Hit = ({ hit }: any) => {
         </p>
         <div className="ais-Hits-item_Footer">
           <div className="ais-Hits-item_Tags">
-            <Highlight attribute="language" hit={hit} />
-            <Highlight attribute="templates" hit={hit} />
+            <span>{hit.language}</span>
+            {hit.templates.map((template: any) => {
+              return <span key={template}>{template}</span>
+            })}
           </div>
           <div className="ais-Hits-item_Star">
             <img src="/star.svg" alt="" width="16" height="15" />
