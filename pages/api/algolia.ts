@@ -14,9 +14,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') return res.end()
-
-  // if (req.headers["authorization"] !== process.env.WEBHOOK_SECRET_KEY)
-  //   return res.status(401).end();
+  if (req.query.secret !== process.env.ALGOLIA_SECRET) {
+    return res.status(401).json({ message: 'Invalid token' })
+  }
 
   try {
     const generators = await fetchGenerators({
@@ -33,6 +33,6 @@ export default async function handler(
 
     res.send(201)
   } catch (err: any) {
-    res.status(400).send(err?.message)
+    res.status(400).json({ message: err?.message })
   }
 }
