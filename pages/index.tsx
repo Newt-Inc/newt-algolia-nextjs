@@ -82,10 +82,6 @@ const Home: NextPage = () => {
 
           <main className={styles.Main}>
             <Hits hitComponent={Hit} />
-            Next.js https://www.newt.so/ Production grade React applications
-            that scale. The world’s leading companies use Next.js by Vercel to
-            build static and dynamic websites and web applications. JavaScript
-            React 2344
           </main>
         </div>
 
