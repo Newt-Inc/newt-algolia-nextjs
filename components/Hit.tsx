@@ -1,8 +1,6 @@
 import { Highlight } from 'react-instantsearch-hooks-web'
 
 export const Hit = ({ hit }: any) => {
-  console.log('hit', hit)
-
   return (
     <>
       <div className="ais-Hits-item_Logo">
@@ -23,7 +21,7 @@ export const Hit = ({ hit }: any) => {
         <div className="ais-Hits-item_Footer">
           <div className="ais-Hits-item_Tags">
             <span>{hit.language}</span>
-            {hit.templates.map((template: any) => {
+            {hit.templates.map((template: string) => {
               return <span key={template}>{template}</span>
             })}
           </div>
