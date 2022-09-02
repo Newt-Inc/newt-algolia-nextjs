@@ -32,6 +32,7 @@ export default async function handler(
     })
 
     await primaryIndex.saveObjects(formattedGenerators)
+    res.status(200).json({ message: 'success' })
   } catch (err: any) {
     res.status(400).json({ message: err?.message })
   }

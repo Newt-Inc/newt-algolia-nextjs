@@ -5,8 +5,9 @@ import {
   InstantSearch,
   SearchBox,
   Hits,
-  SortBy,
   PoweredBy,
+  SortBy,
+  RefinementList,
 } from 'react-instantsearch-hooks-web'
 import styles from '../styles/Home.module.css'
 import { Hit } from '../components/Hit'
@@ -78,32 +79,7 @@ const Home: NextPage = () => {
               ]}
             />
             <h2>Filter</h2>
-            <ul>
-              <li>
-                <label>
-                  <input type="checkbox" />
-                  JavaScript (2)
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" />
-                  PHP (3)
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" />
-                  React (12)
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" />
-                  Vue (1)
-                </label>
-              </li>
-            </ul>
+            <RefinementList attribute={'tags'} limit={20} />
           </nav>
 
           <main className={styles.Main}>

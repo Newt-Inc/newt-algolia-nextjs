@@ -20,15 +20,16 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  // if (req.method !== 'POST') return res.end()
-  // if (req.query.secret !== process.env.ALGOLIA_SECRET) {
-  //   return res.status(401).json({ message: 'Invalid token' })
-  // }
+  if (req.method !== 'POST') return res.end()
+  if (req.query.secret !== process.env.ALGOLIA_SECRET) {
+    return res.status(401).json({ message: 'Invalid token' })
+  }
 
   try {
     await primaryIndex.setSettings({
       searchableAttributes: ['title', 'tags', 'description'],
       customRanking: ['desc(star)'],
+      attributesForFaceting: ['tags'],
       replicas: [
         process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_STAR + '',
         process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_NAME + '',
@@ -38,6 +39,7 @@ export default async function handler(
     await replicaIndexStar.setSettings({
       searchableAttributes: ['title', 'tags', 'description'],
       customRanking: ['desc(star)'],
+      attributesForFaceting: ['tags'],
       ranking: [
         'custom',
         'typo',
@@ -52,6 +54,7 @@ export default async function handler(
     await replicaIndexName.setSettings({
       searchableAttributes: ['title', 'tags', 'description'],
       customRanking: ['asc(title)'],
+      attributesForFaceting: ['tags'],
       ranking: [
         'custom',
         'typo',
