@@ -1,13 +1,13 @@
 import algoliasearch from 'algoliasearch'
 import { NextApiRequest, NextApiResponse } from 'next'
-import { fetchGenerators } from '../../lib/api'
+import { fetchGenerators } from '../../../lib/api'
 
 const algolia = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID + '',
   process.env.ALGOLIA_ADMIN_API_KEY + ''
 )
 
-const index = algolia.initIndex(
+const primaryIndex = algolia.initIndex(
   process.env.NEXT_PUBLIC_ALGOLIA_PRIMARY_INDEX + ''
 )
 
@@ -31,9 +31,7 @@ export default async function handler(
       }
     })
 
-    await index.saveObjects(formattedGenerators)
-
-    res.send(201)
+    await primaryIndex.saveObjects(formattedGenerators)
   } catch (err: any) {
     res.status(400).json({ message: err?.message })
   }

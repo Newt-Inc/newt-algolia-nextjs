@@ -65,12 +65,18 @@ const Home: NextPage = () => {
                   value: process.env.NEXT_PUBLIC_ALGOLIA_PRIMARY_INDEX + '',
                   label: 'Relevance',
                 },
+                {
+                  value:
+                    process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_STAR + '',
+                  label: 'GitHub Stars',
+                },
+                {
+                  value:
+                    process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_NAME + '',
+                  label: 'Name',
+                },
               ]}
             />
-            {/* <select>
-              <option>Name</option>
-              <option>GitHub Stars</option>
-            </select> */}
             <h2>Filter</h2>
             <ul>
               <li>
