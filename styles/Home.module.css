@@ -10,7 +10,7 @@
 .Header {
   background: #f8f8f8;
   text-align: center;
-  padding: 0 28px 54px 28px;
+  padding: 0 28px 68px 28px;
 }
 .Header dl {
   margin: 0;
@@ -45,7 +45,7 @@
 }
 @media (min-width: 600px) {
   .Header {
-    padding: 0 40px 90px 40px;    
+    padding: 0 40px 110px 40px;    
   }
   .Header dl {
     padding: 10px 0 88px 0;

@@ -25,31 +25,29 @@ a:hover {
   text-decoration: none;
 }
 
-/* ais-Search */
-.Search {
+
+/*---------- Algolia ----------*/
+
+/* SearchBox */
+.ais-Search_Wrapper {
   position: relative;
   max-width: 520px;
   margin: 0 auto;
 }
-.Search_FormIcon {
+.ais-Search_Icon {
   position: absolute;
   left: 20px;
   top: 14px;
   pointer-events: none;
 }
-.Search_Logo {
-  width: 120px;
-  margin: 20px auto 0 auto;
+.ais-Search_Logo {
+  width: 110px;
+  position: absolute;
+  right: 20px;
+  top: 14px;
 }
-@media (min-width: 600px) {
-  .Search_Logo {
-    width: 140px;
-  }
-}
-
-/* ais-SearchBox */
 .ais-SearchBox-form input[type="search"] {
-  padding: 0 16px 0 52px;
+  padding: 0 134px 0 52px;
   height: 46px;
   border-radius: 23px;
   width: 100%;
@@ -70,7 +68,7 @@ a:hover {
   left: calc(50% - 8px);
 }
 
-/* ais-SortBy-select */
+/* SortBy */
 .ais-SortBy-select {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -98,7 +96,7 @@ a:hover {
   }
 }
 
-/* ais-RefinementList */
+/* RefinementList */
 .ais-RefinementList-list {
   margin: 0;
   padding: 0;
@@ -134,7 +132,7 @@ a:hover {
   }
 }
 
-/* ais-Hits */
+/* Hits */
 .ais-Hits-list {
   margin: 0;
   padding: 0;

@@ -21,6 +21,7 @@ const searchClient = algoliasearch(
 const Home: NextPage = () => {
   return (
     <div className={styles.Wrapper}>
+
       <Head>
         <title>Newt + Algolia Example</title>
         <meta name="description" content="Newt + Algolia Example" />
@@ -48,15 +49,14 @@ const Home: NextPage = () => {
             </dd>
           </dl>
           <h1>Static Site Generators 😉</h1>
-          <div className="Search">
+          <div className="ais-Search_Wrapper">
             <SearchBox />
-            <span className="Search_FormIcon">
+            <span className="ais-Search_Icon">
               <img src="/search.svg" alt="" width="19" height="19" />
             </span>
-            <PoweredBy className="Search_Logo" />
+            <PoweredBy className="ais-Search_Logo" />
           </div>
         </header>
-
         <div className={styles.Container}>
           <nav className={styles.Nav}>
             <h2>Sort</h2>
@@ -85,14 +85,12 @@ const Home: NextPage = () => {
               sortBy={['count:desc', 'name:asc']}
             />
           </nav>
-
           <main className={styles.Main}>
             <NoResultsBoundary fallback={<NoResults />}>
               <Hits hitComponent={Hit} />
             </NoResultsBoundary>
           </main>
         </div>
-
         <footer className={styles.Footer}>
           <dl>
             <dt>Newt + Algolia Example</dt>
@@ -119,6 +117,7 @@ const Home: NextPage = () => {
         <img src="/logo.svg" alt="Newt" width="16" height="13" />
         <span className={styles.Badge_Text}>Made in Newt</span>
       </a>
+
     </div>
   )
 }
