@@ -81,8 +81,8 @@ const Home: NextPage = () => {
             <h2>Filter</h2>
             <RefinementList
               attribute={'tags'}
-              sortBy={['count:desc', 'name:asc']}
               limit={10}
+              sortBy={['count:desc', 'name:asc']}
             />
           </nav>
 
