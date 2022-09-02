@@ -73,8 +73,8 @@ const Home: NextPage = () => {
                 },
                 {
                   value:
-                    process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_NAME + '',
-                  label: 'Name',
+                    process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_TITLE + '',
+                  label: 'Title',
                 },
               ]}
             />

@@ -13,7 +13,7 @@ const replicaIndexStar = algolia.initIndex(
   process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_STAR + ''
 )
 const replicaIndexName = algolia.initIndex(
-  process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_NAME + ''
+  process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_TITLE + ''
 )
 
 export default async function handler(
@@ -32,7 +32,7 @@ export default async function handler(
       attributesForFaceting: ['tags'],
       replicas: [
         process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_STAR + '',
-        process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_NAME + '',
+        process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_TITLE + '',
       ],
     })
 
