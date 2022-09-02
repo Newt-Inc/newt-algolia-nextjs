@@ -79,7 +79,11 @@ const Home: NextPage = () => {
               ]}
             />
             <h2>Filter</h2>
-            <RefinementList attribute={'tags'} limit={20} />
+            <RefinementList
+              attribute={'tags'}
+              sortBy={['count:desc', 'name:asc']}
+              limit={20}
+            />
           </nav>
 
           <main className={styles.Main}>
