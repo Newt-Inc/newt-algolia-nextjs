@@ -21,7 +21,6 @@ export default async function handler(
   try {
     const generators = await fetchGenerators({
       description: { fmt: 'text' },
-      order: ['-stars'],
     })
     const formattedGenerators = generators.map((generator) => {
       return {
