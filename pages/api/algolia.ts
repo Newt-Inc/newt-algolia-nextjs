@@ -7,7 +7,9 @@ const algolia = algoliasearch(
   process.env.ALGOLIA_ADMIN_API_KEY + ''
 )
 
-const index = algolia.initIndex(process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME + '')
+const index = algolia.initIndex(
+  process.env.NEXT_PUBLIC_ALGOLIA_PRIMARY_INDEX + ''
+)
 
 export default async function handler(
   req: NextApiRequest,

@@ -5,6 +5,7 @@ import {
   InstantSearch,
   SearchBox,
   Hits,
+  SortBy,
   PoweredBy,
 } from 'react-instantsearch-hooks-web'
 import styles from '../styles/Home.module.css'
@@ -26,7 +27,7 @@ const Home: NextPage = () => {
       </Head>
 
       <InstantSearch
-        indexName={process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME + ''}
+        indexName={process.env.NEXT_PUBLIC_ALGOLIA_PRIMARY_INDEX + ''}
         searchClient={searchClient}
       >
         <header className={styles.Header}>
@@ -58,10 +59,18 @@ const Home: NextPage = () => {
         <div className={styles.Container}>
           <nav className={styles.Nav}>
             <h2>Sort</h2>
-            <select>
+            <SortBy
+              items={[
+                {
+                  value: process.env.NEXT_PUBLIC_ALGOLIA_PRIMARY_INDEX + '',
+                  label: 'Relevance',
+                },
+              ]}
+            />
+            {/* <select>
               <option>Name</option>
               <option>GitHub Stars</option>
-            </select>
+            </select> */}
             <h2>Filter</h2>
             <ul>
               <li>
