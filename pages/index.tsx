@@ -82,7 +82,7 @@ const Home: NextPage = () => {
             <RefinementList
               attribute={'tags'}
               sortBy={['count:desc', 'name:asc']}
-              limit={20}
+              limit={10}
             />
           </nav>
 
