@@ -27,7 +27,7 @@ export default async function handler(
 
   try {
     await primaryIndex.setSettings({
-      searchableAttributes: ['title', 'language, templates', 'description'],
+      searchableAttributes: ['title', 'tags', 'description'],
       customRanking: ['desc(star)'],
       replicas: [
         process.env.NEXT_PUBLIC_ALGOLIA_REPLICA_INDEX_STAR + '',
@@ -36,7 +36,7 @@ export default async function handler(
     })
 
     await replicaIndexStar.setSettings({
-      searchableAttributes: ['title', 'language, templates', 'description'],
+      searchableAttributes: ['title', 'tags', 'description'],
       customRanking: ['desc(star)'],
       ranking: [
         'custom',
@@ -50,7 +50,7 @@ export default async function handler(
       ],
     })
     await replicaIndexName.setSettings({
-      searchableAttributes: ['title', 'language, templates', 'description'],
+      searchableAttributes: ['title', 'tags', 'description'],
       customRanking: ['asc(title)'],
       ranking: [
         'custom',

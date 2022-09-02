@@ -15,7 +15,6 @@ export interface Generator extends Content {
   logo: Image
   description?: string
   url: string
-  language: string
-  templates: string[]
+  tags: string[]
   star: number
 }

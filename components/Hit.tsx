@@ -20,9 +20,8 @@ export const Hit = ({ hit }: any) => {
         </p>
         <div className="ais-Hits-item_Footer">
           <div className="ais-Hits-item_Tags">
-            <span>{hit.language}</span>
-            {hit.templates.map((template: string) => {
-              return <span key={template}>{template}</span>
+            {hit.tags.map((tag: string) => {
+              return <span key={tag}>{tag}</span>
             })}
           </div>
           <div className="ais-Hits-item_Star">
