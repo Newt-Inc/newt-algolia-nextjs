@@ -31,8 +31,8 @@ export default async function handler(
       }
     })
 
-    await primaryIndex.saveObjects(formattedGenerators)
-    res.status(200).json({ message: 'success' })
+    const { objectIDs } = await primaryIndex.saveObjects(formattedGenerators)
+    res.status(200).json({ objectIDs })
   } catch (err: any) {
     res.status(400).json({ message: err?.message })
   }
