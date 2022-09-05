@@ -1,4 +1,4 @@
-import { createClient, GetContentsQuery } from 'newt-client-js'
+import { createClient } from 'newt-client-js'
 import { Generator } from '../types/generator'
 
 const client = createClient({
@@ -7,11 +7,13 @@ const client = createClient({
   apiType: 'cdn',
 })
 
-export const fetchGenerators = async (query: GetContentsQuery) => {
+export const fetchGenerators = async () => {
   const { items } = await client.getContents<Generator>({
     appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
     modelUid: process.env.NEXT_PUBLIC_NEWT_MODEL_UID + '',
-    query,
+    query: {
+      description: { fmt: 'text' },
+    },
   })
   return items
 }
