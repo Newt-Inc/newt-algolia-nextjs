@@ -15,8 +15,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') return res.end()
-  if (req.query.secret !== process.env.ALGOLIA_SECRET) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: `Method not allowed` })
+  }
+  if (req.query.secret !== process.env.ALGOLIA_SECRET_TOKEN) {
     return res.status(401).json({ message: 'Invalid token' })
   }
 
