@@ -7,7 +7,7 @@ const client = createClient({
   apiType: 'cdn',
 })
 
-export const getGenerators = async () => {
+export const getGenerators = async (): Promise<Generator[]> => {
   const { items } = await client.getContents<Generator>({
     appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
     modelUid: process.env.NEXT_PUBLIC_NEWT_MODEL_UID + '',
