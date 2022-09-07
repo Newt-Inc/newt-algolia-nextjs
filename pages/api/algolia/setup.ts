@@ -53,6 +53,7 @@ export default async function handler(
         'exact',
       ],
     })
+
     await replicaIndexName.setSettings({
       searchableAttributes: ['title', 'tags', 'description'],
       customRanking: ['asc(title)'],
@@ -68,6 +69,7 @@ export default async function handler(
         'exact',
       ],
     })
+
     res.status(200).json({ message: 'success' })
   } catch (err: any) {
     res.status(400).json({ message: err?.message })
