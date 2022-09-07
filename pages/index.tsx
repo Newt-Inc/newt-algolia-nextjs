@@ -42,7 +42,11 @@ const Home: NextPage = () => {
               >
                 GitHub
               </a>
-              <a href="#" rel="noreferrer noopener" target="_blank">
+              <a
+                href="https://www.newt.so/docs/tutorials/search-by-algolia"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 Tutorial page
               </a>
             </dd>
@@ -101,7 +105,9 @@ const Home: NextPage = () => {
               >
                 GitHub
               </a>
-              <a href="#">Tutorial page</a>
+              <a href="https://www.newt.so/docs/tutorials/search-by-algolia">
+                Tutorial page
+              </a>
             </dd>
           </dl>
         </footer>
