@@ -31,8 +31,8 @@ export default async function handler(
       }
     })
 
-    const { objectIDs } = await index.saveObjects(formattedGenerators)
-    res.status(200).json({ objectIDs })
+    await index.saveObjects(formattedGenerators)
+    res.status(200).json({ message: 'Success' })
   } catch (err: any) {
     res.status(400).json({ message: err?.message })
   }

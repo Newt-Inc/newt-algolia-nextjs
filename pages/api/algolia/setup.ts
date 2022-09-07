@@ -70,7 +70,7 @@ export default async function handler(
       ],
     })
 
-    res.status(200).json({ message: 'success' })
+    res.status(200).json({ message: 'Success' })
   } catch (err: any) {
     res.status(400).json({ message: err?.message })
   }
