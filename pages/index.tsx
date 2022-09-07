@@ -21,7 +21,6 @@ const searchClient = algoliasearch(
 const Home: NextPage = () => {
   return (
     <div className={styles.Wrapper}>
-
       <Head>
         <title>Newt + Algolia Example</title>
         <meta name="description" content="Newt + Algolia Example" />
@@ -117,7 +116,6 @@ const Home: NextPage = () => {
         <img src="/logo.svg" alt="Newt" width="16" height="13" />
         <span className={styles.Badge_Text}>Made in Newt</span>
       </a>
-
     </div>
   )
 }
