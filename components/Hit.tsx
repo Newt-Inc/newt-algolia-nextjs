@@ -1,10 +1,17 @@
+import type { Hit as HitType } from 'instantsearch.js'
 import { Highlight } from 'react-instantsearch-hooks-web'
+import { Generator } from '../types/generator'
 
-export const Hit = ({ hit }: any) => {
+export const Hit = ({ hit }: { hit: HitType & Generator }) => {
   return (
     <>
       <div className="ais-Hits-item_Logo">
-        <img src={hit.logo.src} alt={hit.fileName} width="40" height="40" />
+        <img
+          src={hit.logo.src}
+          alt={hit.logo.fileName}
+          width="40"
+          height="40"
+        />
       </div>
       <div className="ais-Hits-item_Data">
         <div className="ais-Hits-item_Header">

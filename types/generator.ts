@@ -12,7 +12,7 @@ interface Image {
 
 export interface Generator extends Content {
   title: string
-  logo?: Image
+  logo: Image
   description?: string
   url: string
   tags: string[]
