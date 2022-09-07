@@ -24,7 +24,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Newt・Algolia・Next.js Example</title>
         <meta name="description" content="Newt・Algolia・Next.js Example" />
-        <meta property="og:image" content="https://newt-algolia-nextjs.vercel.app/og.jpg" />
+        <meta
+          property="og:image"
+          content="https://newt-algolia-nextjs.vercel.app/og.jpg"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -106,7 +109,11 @@ const Home: NextPage = () => {
               >
                 GitHub
               </a>
-              <a href="https://www.newt.so/docs/tutorials/search-by-algolia">
+              <a
+                href="https://www.newt.so/docs/tutorials/search-by-algolia"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 Tutorial
               </a>
             </dd>
