@@ -22,8 +22,9 @@ const Home: NextPage = () => {
   return (
     <div className={styles.Wrapper}>
       <Head>
-        <title>Newt + Algolia Example</title>
-        <meta name="description" content="Newt + Algolia Example" />
+        <title>Newt・Algolia・Next.js Example</title>
+        <meta name="description" content="Newt・Algolia・Next.js Example" />
+        <meta property="og:image" content="https://newt-algolia-nextjs.vercel.app/og.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -33,7 +34,7 @@ const Home: NextPage = () => {
       >
         <header className={styles.Header}>
           <dl>
-            <dt>Newt + Algolia Example</dt>
+            <dt>Newt・Algolia・Next.js Example</dt>
             <dd>
               <a
                 href="https://github.com/Newt-Inc/newt-algolia-nextjs"
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                Tutorial page
+                Tutorial
               </a>
             </dd>
           </dl>
@@ -96,7 +97,7 @@ const Home: NextPage = () => {
         </div>
         <footer className={styles.Footer}>
           <dl>
-            <dt>Newt + Algolia Example</dt>
+            <dt>Newt・Algolia・Next.js Example</dt>
             <dd>
               <a
                 href="https://github.com/Newt-Inc/newt-algolia-nextjs"
@@ -106,7 +107,7 @@ const Home: NextPage = () => {
                 GitHub
               </a>
               <a href="https://www.newt.so/docs/tutorials/search-by-algolia">
-                Tutorial page
+                Tutorial
               </a>
             </dd>
           </dl>
