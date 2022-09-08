@@ -1,6 +1,6 @@
 {
-  "name": "algolia-nextjs",
-  "version": "0.1.0",
+  "name": "newt-algolia-nextjs",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -27,5 +27,10 @@
     "instantsearch.js": "^4.43.1",
     "prettier": "^2.7.1",
     "typescript": "4.8.2"
-  }
+  },
+  "author": "Newt, Inc.",
+  "license": "MIT",
+  "keywords": [
+    "newt"
+  ]
 }
