@@ -22,3 +22,7 @@ Newt・Algolia・Next.jsを利用して、高度な全文検索機能を実現�
 | URL | url | テキスト | 必須フィールド |
 | タグ | tags | 選択（子要素: テキスト） | 必須フィールド, 複数値 |
 | スター | star | 数字 | 必須フィールド |
+
+## License
+
+[MIT License](https://github.com/Newt-Inc/newt-algolia-nextjs/blob/main/LICENSE)
